@@ -62,9 +62,10 @@ class TestBooksCollector:
 
     def test_delete_book_from_favorites(self):
         collector = BooksCollector()
-        collector.add_new_book('Пнин')
-        collector.add_book_in_favorites('Пнин')
-        collector.delete_book_from_favorites('Пнин')
+        pnin = "Пнин"
+        collector.add_new_book(pnin)
+        collector.add_book_in_favorites(pnin)
+        collector.delete_book_from_favorites(pnin)
         assert collector.get_list_of_favorites_books() == []
 
     def test_get_list_of_favorites_books_add_not_favorite_book(self):
